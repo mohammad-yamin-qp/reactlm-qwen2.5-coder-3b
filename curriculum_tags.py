@@ -30,6 +30,14 @@ RULES: list[tuple[str, re.Pattern[str]]] = [
     ("when-to-use", re.compile(r"when\s+to\s+use|vs\.?\s|which\s+(should|to)|prefer\s+\w+\s+over", re.I)),
     ("compound-pattern", re.compile(r"compound|\.Header|\.Body|\.Footer|subcomponent", re.I)),
     ("use-reducer", re.compile(r"useReducer", re.I)),
+    (
+        "folder-structure",
+        re.compile(
+            r"folder structure|project structure|src/features|features/.*/components|"
+            r"type-based|feature-based|colocat(e|ed) folder",
+            re.I,
+        ),
+    ),
 ]
 
 

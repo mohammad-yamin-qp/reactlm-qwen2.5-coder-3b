@@ -33,6 +33,7 @@ MINIMUMS: dict[str, int] = {
     "css-modules": 5,
     "scss": 12,
     "compound-pattern": 5,
+    "folder-structure": 8,
 }
 
 TAILWIND_CODE = re.compile(

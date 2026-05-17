@@ -633,28 +633,7 @@ $text: #111827;
             )
         )
 
-    # Senior composites
-    composites = [
-        ("checkout", "XState + TanStack Query + React Hook Form"),
-        ("dashboard", "TanStack Query + Zustand filters"),
-        ("design-system", "Storybook + compound components"),
-        ("landing", "GSAP ScrollTrigger + reduced-motion"),
-    ]
-    for name, stack in composites:
-        for i in range(10):
-            seeds.append(
-                ex(
-                    f"Architect a production {name} feature ({stack}) — show folder structure and provider wiring.",
-                    f"""\
-// Feature: {name} — stack: {stack}
-// src/features/{name}/components/
-// src/features/{name}/hooks/
-// src/app/providers.tsx — wrap QueryClientProvider + stores
-export function {name.title().replace('-', '')}Shell{{ {i + 1} }}() {{
-  return <div className="min-h-screen bg-gray-50 p-6"><p className="text-sm text-gray-600">Feature shell</p></motion.div>;
-}}""".replace("<motion.div", "<div").replace("</motion.div>", "</motion.div>").replace("</motion.div>", "</motion.div>").replace("</motion.div>", "</motion.div>").replace("</motion.div>", "</div>"),
-                )
-            )
+    # Senior feature architecture → seeds/folder_structure_examples.py
 
     # Extended: React 19 useActionState
     for i in range(25):

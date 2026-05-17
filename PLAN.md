@@ -49,6 +49,7 @@ for **~2,500–3,200** `train.jsonl` rows. Quality over arbitrary row caps — r
 | **Testing / docs** | Vitest, React Testing Library, MSW, Storybook |
 | **Routing / UI** | React Router v6+, shadcn/ui + Radix |
 | **Senior judgment** | “When to use what” comparison seeds (Query vs fetch, Zustand vs Redux, etc.) |
+| **Folder structure** | Feature-based vs type-based `src/`, colocation, providers, routes, tests (`seeds/folder_structure_examples.py`) |
 
 **Deferred (v1):** TanStack Start, full MUI/Ant Design API — use Context7 MCP at inference for version-specific docs.
 
