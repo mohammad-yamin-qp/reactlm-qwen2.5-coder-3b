@@ -101,7 +101,17 @@ export function useCreate{name}() {{
         )
 
     # Zustand
-    stores = ["cart", "filters", "ui", "session", "notifications", "preferences", "modal", "sidebar"]
+    stores = [
+        "cart",
+        "filters",
+        "ui",
+        "session",
+        "notifications",
+        "preferences",
+        "modal",
+        "sidebar",
+        "wizard",
+    ]
     for store in stores:
         seeds.append(
             ex(
@@ -278,7 +288,23 @@ export function {form.title()}Form() {{
         )
 
     # GSAP
-    for anim in ["hero", "sidebar", "cards", "timeline", "stats"]:
+    for anim in [
+        "hero",
+        "sidebar",
+        "cards",
+        "timeline",
+        "stats",
+        "navbar",
+        "modal",
+        "drawer",
+        "marquee",
+        "progress",
+        "grid",
+        "flip",
+        "headline",
+        "chart",
+        "footer",
+    ]:
         seeds.append(
             ex(
                 f"Animate {anim} entrance with GSAP useGSAP and respect prefers-reduced-motion.",
