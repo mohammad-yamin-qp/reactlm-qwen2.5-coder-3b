@@ -98,7 +98,7 @@ react-lm/
 │   └── generate_curriculum.py # Programmatic bulk seeds
 │
 ├── colab/
-│   └── react_lm_finetune.ipynb  # Steps 3–4: chat template + QLoRA (Colab GPU)
+│   └── react_lm_finetune.ipynb  # Steps 3–6: chat template, QLoRA, eval, GGUF (Colab GPU)
 ├── build_dataset.py           # Full pipeline orchestrator
 ├── split_dataset.py           # Merge, dedupe, train/eval split
 ├── augment_dataset.py         # Prompt paraphrases → train.jsonl
@@ -134,9 +134,8 @@ Dataset prep is local; **fine-tuning runs in Colab**:
 
 | Step | Action |
 |------|--------|
-| 3–4 | Open **[colab/react_lm_finetune.ipynb](colab/react_lm_finetune.ipynb)** (GPU), upload `train.jsonl`, run all cells |
-| 5 | Manual eval on `eval.jsonl` before export — see [PLAN.md](PLAN.md) |
-| 6–7 | GGUF export + Ollama `Modelfile` — see [PLAN.md](PLAN.md) |
+| 3–6 | Open **[colab/react_lm_finetune.ipynb](colab/react_lm_finetune.ipynb)** (GPU), provide `train.jsonl` + `eval.jsonl`, run all cells |
+| 7 | Ollama + `Modelfile` locally after downloading the GGUF — see [PLAN.md](PLAN.md) |
 
 After export, register the model with the included Modelfile:
 
