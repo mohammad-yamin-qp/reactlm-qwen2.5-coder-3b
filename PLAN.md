@@ -110,6 +110,14 @@ Qwen2.5-Coder uses `<|im_start|>` / `<|im_end|>` tokens internally. Unsloth's
 you call `apply_chat_template()` on your dataset. Manual formatting will cause
 token misalignment.
 
+### Colab notebook (Steps 3 + 4)
+
+Open **[colab/react_lm_finetune.ipynb](colab/react_lm_finetune.ipynb)** in Google Colab (GPU runtime):
+
+1. Run the install cell, then upload `train.jsonl` (or clone this repo so the file is present).
+2. The notebook loads `unsloth/Qwen2.5-Coder-3B-Instruct`, applies the Qwen2.5 chat template, maps `conversations` → `text`, verifies a sample, then runs QLoRA (Step 4).
+3. Keep `eval.jsonl` for Step 5 only — do not add it to the training map.
+
 ---
 
 ## Step 4: Fine-Tune with QLoRA + Unsloth
